@@ -160,5 +160,6 @@
   <script type="text/javascript" src="<?php echo base_url('assets_frontend/js/parallax.js')?>" ></script>
   <script type="text/javascript" src="<?php echo base_url('assets_frontend/js/owl.carousel.min.js')?>" ></script>
   <script type="text/javascript" src="<?php echo base_url('assets_frontend/js/custom.js')?>" ></script>
+  
 </body>
 </html>

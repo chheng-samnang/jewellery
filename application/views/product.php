@@ -157,9 +157,9 @@
       </a>
       <meta itemprop="position" content="1">
     </li>
-      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-        <a itemprop="item" href="">
-          <span itemprop="name"> <?php echo $product->parent_id;?></span>
+      <li itemprop="itemListElement" itemscope="">
+        <a itemprop="item" href="<?php echo base_url('products/'.$product->parent_id);?>">
+          <span itemprop="name"> <?php  echo  $product->parent_id;?></span>
         </a>
         <meta itemprop="position" content="2">
       </li>
@@ -209,14 +209,12 @@
           <div class="category-cover">
             <img src="" alt="">
           </div>
-          <h1 class="h1 title-category">sdfsdf</h1>
+          
           <div id="category-description" class="text-muted">
-            <p>fsdfdsff</p>
+            <p><?php echo $product->cat_desc;?></p>
           </div>
           </div>
-          <div class="text-xs-center hidden-md-up">
-            <h1 class="h1">Women</h1>
-          </div>
+         
           <section id="products">
 
             <div id="">
@@ -232,39 +230,6 @@
                 </div>
                 <p>There are 12 products.</p>
               </div>
-              <div class="col-md-6">
-                <div class="row">
-                  <span class="col-sm-3 col-md-3 hidden-sm-down sort-by">Sort by:</span>
-                  <div class="col-sm-9 col-xs-8 col-md-9 products-sort-order dropdown">
-                    <a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Select
-                      <i class="fa fa-angle-down pull-xs-right"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                      <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?order=product.position.asc" class="select-list current js-search-link">
-                        Relevance
-                      </a>
-                      <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?order=product.name.asc" class="select-list js-search-link">
-                        Name, A to Z
-                      </a>
-                      <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?order=product.name.desc" class="select-list js-search-link">
-                        Name, Z to A
-                      </a>
-                      <a rel="nofollow" href="" class="select-list js-search-link">
-                        Price, low to high
-                      </a>
-                      <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?order=product.price.desc" class="select-list js-search-link">
-                        Price, high to low
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-4 hidden-md-up filter-button">
-                    <button id="search_filter_toggler" class="btn btn-secondary">
-                      Filter
-                    </button>
-                  </div>
-                </div>
-              </div>
             
               <div class="col-sm-12 hidden-md-up text-xs-center showing">
                 Showing 1-12 of 20 item(s)
@@ -276,14 +241,14 @@
             <div id="js-product-list" class="row">
               <div class="products product-thumbs">
               <?php foreach ($get_product1 as  $value) {?>
-                <article class="product-miniature js-product-miniature product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12" data-id-product="1" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
+                <article class="product-miniature js-product-miniature product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12" data-id-product="1" data-id-product-attribute="0" itemscope="">
                   <div class="thumbnail-container">
                     <div class="ttproduct-image">
 
                       <a href="<?php echo base_url('detail/'.$value->p_id);?>" class="thumbnail product-thumbnail">
                         <img class="ttproduct-img1" src="<?php echo base_url('assets/uploads/'.$value->file_name);?>" alt="" data-full-size-image-url="<?php echo base_url('assets/uploads/'.$value->file_name);?>">
 
-                        <img class="second_image img-responsive" src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/302-home_default/faded-short-sleeves-tshirt.jpg" data-full-size-image-url="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/302-large_default/faded-short-sleeves-tshirt.jpg" alt="">
+                      
                       </a>
                       <ul class="product-flags"></ul>
                     </div>
@@ -303,37 +268,7 @@
               </article>
               <?php }?>
             </div>
-<!-- <div class="container" id="container"> -->
-  <nav class="pagination">
-    <div class="col-md-4 pagination-left">
-      Showing 1-12 of 20 item(s)
-    </div>
-    <div class="col-md-6 pagination-right">
-      <ul class="page-list clearfix text-xs-center">
-        <li>
-          <a rel="prev" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=1" class="previous disabled js-search-link">
-            <i class="material-icons"></i>Previous
-          </a>
-        </li>
-        <li class="current">
-          <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=1" class="disabled js-search-link">
-            1
-          </a>
-        </li>
-        <li>
-          <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=2" class="js-search-link">
-            2
-          </a>
-        </li>
-        <li>
-          <a rel="next" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=2" class="next js-search-link">
-            <i class="material-icons"></i>Next
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-<!-- </div> -->
+
 </div>
 
 </section>

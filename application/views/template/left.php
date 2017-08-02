@@ -8,6 +8,9 @@
                 <li>
                     <a href="<?php echo base_url();?>admin/User"><i class="glyphicon glyphicon-user"></i> User Management</a>
                 </li>
+                <li>
+                    <a href="<?php echo base_url();?>admin/Category"><i class="glyphicon glyphicon-list"></i> Parent Category</a>
+                </li>
                  <li>
                     <a href="<?php echo base_url();?>admin/Category"><i class="glyphicon glyphicon-list"></i> Category Managements</a>
                 </li>                        

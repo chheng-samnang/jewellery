@@ -1858,7 +1858,7 @@ pre code {
     cursor: not-allowed;
 }
 select.form-control:not([size]):not([multiple]) {
-    height: 2.5rem;
+    height: 2.4rem;
 }
 select.form-control:focus::-ms-value {
     color: #777777;
@@ -6172,7 +6172,7 @@ small.value {
     font-size: 13px;
     font-weight: normal;
     margin-left: 0;
-    padding: 7px;
+    /*padding: 7px;*/
     text-transform: capitalize;
 }
 #customer-form .input-group .input-group-btn > .btn {

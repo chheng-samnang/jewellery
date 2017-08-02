@@ -1,4 +1,4 @@
-<?php error_reporting(0);?>
+
 <section id="wrapper">
 	<div class="full-container">
 		<div id="content-wrapper">
@@ -9,7 +9,9 @@
 					<div class="container" id="category">
 						<div class="col-md-12">
 							<div class="col-sm-9">
-								<h3 class="tt-title"  style="margin-left: -9px;"><?php echo $value->cat_name?></h3>
+								<a href="<?php echo base_url('product/'.$value->cat_id);?>">
+									<h3 class="tt-title"  style="margin-left: -9px;"><?php echo $value->cat_name?></h3>
+								</a>
 							</div>
 							<div class="col-md-3"></div>
 						</div>
@@ -26,7 +28,7 @@
 											<a href="<?php echo base_url('detail/'.$row->p_id);?>" class="thumbnail product-thumbnail">
 												<img class="ttproduct-img1" src = "<?php echo base_url('assets/uploads/'.$row->file_name);?>" alt = "" data-full-size-image-url = "<?php echo base_url('assets/uploads/'.$row->file_name);?>" >
 
-									</a>
+											</a>
 
 										</div>
 										<!-- <div class="ttproduct-desc"> -->
@@ -35,86 +37,86 @@
 											<span itemprop="price" class="price" style="float: right; color: red;"><?php echo "$".$row->price?></span>
 
 
-		</div>
+										</div>
 
-	</div>
-</article>
-<?php } }?>
+									</div>
+								</article>
+								<?php } }?>
 
-</div><!-- products -->
-</div><!-- row -->
-</div><!-- ttspecial-list container -->
-<?php }?>
-<!-- <div class="allproduct"><a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/prices-drop">All sale products</a></div> -->
-</section><!-- Specials-->
-<div class="container" id="container">
-	<h1>OUR CLIENT</h1>
-</div>
-<section class="brands container" style="background: #fff;    box-shadow: 0px 40px 71px 10px #2c1608;">
+							</div><!-- products -->
+						</div><!-- row -->
+					</div><!-- ttspecial-list container -->
+					<?php }?>
+					<!-- <div class="allproduct"><a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/prices-drop">All sale products</a></div> -->
+				</section><!-- Specials-->
+				<div class="container" id="container">
+					<h1>OUR CLIENT</h1>
+				</div>
+				<section class="brands container" style="background: #fff;    box-shadow: 0px 40px 71px 10px #2c1608;">
 
-	
 
-	<div class="products">
-		<ul id="ttbrandlogo-carousel" class="product_list">
-			<li>
-				<div class="brand-image">
-					<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/1_fashion-manufacturer1" title="Fashion Manufacturer1">
-						<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/1.jpg" alt="Fashion Manufacturer1" />
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="brand-image">
-					<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/2_fashion-manufacturer2" title="Fashion Manufacturer2">
-						<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/2.jpg" alt="Fashion Manufacturer2" />
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="brand-image">
-					<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3_fashion-manufacturer3" title="Fashion Manufacturer3">
-						<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/3.jpg" alt="Fashion Manufacturer3" />
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="brand-image">
-					<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/4_fashion-manufacturer4" title="Fashion Manufacturer4">
-						<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/4.jpg" alt="Fashion Manufacturer4" />
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="brand-image">
-					<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/5_fashion-manufacturer5" title="Fashion Manufacturer5">
-						<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/5.jpg" alt="Fashion Manufacturer5" />
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="brand-image">
-					<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/6_fashion-manufacturer6" title="Fashion Manufacturer6">
-						<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/6.jpg" alt="Fashion Manufacturer6" />
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="brand-image">
-					<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/7_fashion-manufacturer7" title="Fashion Manufacturer7">
-						<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/7.jpg" alt="Fashion Manufacturer7" />
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="brand-image">
-					<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/8_fashion-manufacturer8" title="Fashion Manufacturer8">
-						<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/8.jpg" alt="Fashion Manufacturer8" />
-					</a>
-				</div>
-			</li>
-		</ul>
-	</div>
-</section><!-- brands container -->
+
+					<div class="products">
+						<ul id="ttbrandlogo-carousel" class="product_list">
+							<li>
+								<div class="brand-image">
+									<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/1_fashion-manufacturer1" title="Fashion Manufacturer1">
+										<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/1.jpg" alt="Fashion Manufacturer1" />
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="brand-image">
+									<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/2_fashion-manufacturer2" title="Fashion Manufacturer2">
+										<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/2.jpg" alt="Fashion Manufacturer2" />
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="brand-image">
+									<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3_fashion-manufacturer3" title="Fashion Manufacturer3">
+										<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/3.jpg" alt="Fashion Manufacturer3" />
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="brand-image">
+									<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/4_fashion-manufacturer4" title="Fashion Manufacturer4">
+										<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/4.jpg" alt="Fashion Manufacturer4" />
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="brand-image">
+									<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/5_fashion-manufacturer5" title="Fashion Manufacturer5">
+										<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/5.jpg" alt="Fashion Manufacturer5" />
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="brand-image">
+									<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/6_fashion-manufacturer6" title="Fashion Manufacturer6">
+										<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/6.jpg" alt="Fashion Manufacturer6" />
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="brand-image">
+									<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/7_fashion-manufacturer7" title="Fashion Manufacturer7">
+										<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/7.jpg" alt="Fashion Manufacturer7" />
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="brand-image">
+									<a href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/8_fashion-manufacturer8" title="Fashion Manufacturer8">
+										<img src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/img/m/8.jpg" alt="Fashion Manufacturer8" />
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section><!-- brands container -->
 <!-- <div id="ttcmsservices" class="container">
 	<div class="ttservicebanner col-sm-6">
 		<div class="ttservices-img"><a href="#"><img src="assets/img/services.jpg" alt="services.jpg" /></a></div>

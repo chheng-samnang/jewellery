@@ -158,7 +158,7 @@
        <meta itemprop="position" content="1">
      </li>
      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a itemprop="item" href="<?php echo base_url('pages/'.$main_category->cat_id);?>">
+      <a itemprop="item" href="<?php echo base_url('products/'.$main_category->cat_id);?>">
         <span itemprop="name"> <?php echo $main_category->cat_name;?></span>
       </a>
       <meta itemprop="position" content="2">
@@ -195,6 +195,7 @@
           </ul>
         </div>
       </div>
+      <img src="<?php echo base_url('assets_frontend/img/advertising-s1.jpg');?>" style="margin-bottom: 20px;">
     </div>
     <div id="content-wrapper" class="left-column col-xs-12 col-sm-8 col-md-9">
       <section id="main">
@@ -225,15 +226,22 @@
               </div>
               <p>There are 12 products.</p>
             </div>
-            <div class="col-md-6">
-              <div class="row">
-                <span class="col-sm-3 col-md-3 hidden-sm-down sort-by">Sort by:</span>
+           <!--  <div class="col-md-6">
+              <div class="row"> -->
+                <!-- <span class="col-sm-3 col-md-3 hidden-sm-down sort-by">Sort by:</span>
                 <div class="col-sm-9 col-xs-8 col-md-9 products-sort-order dropdown">
-                  <a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btn_asc">asdad</button> <button id="btn_desc">Hello 2</button>
+                     <select id="searchFilter" class="select-title">
+                          <option value="">Sort By</option>
+                          <option value="asc">Ascending</option>
+                          <option value="desc">Descending</option>
+                    </select> -->
+<!--                   <a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Select
                     <i class="fa fa-angle-down pull-xs-right"></i>
-                  </a>
-                  <div class="dropdown-menu">
+                  </a> -->
+                   
+                  <!-- <div class="dropdown-menu">
                     <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?order=product.position.asc" class="select-list current js-search-link">
                       Relevance
                     </a>
@@ -249,15 +257,15 @@
                     <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?order=product.price.desc" class="select-list js-search-link">
                       Price, high to low
                     </a>
-                  </div>
-                </div>
+                  </div> -->
+             <!--    </div>
                 <div class="col-sm-3 col-xs-4 hidden-md-up filter-button">
                   <button id="search_filter_toggler" class="btn btn-secondary">
                     Filter
                   </button>
                 </div>
               </div>
-            </div>
+            </div> -->
             
             <div class="col-sm-12 hidden-md-up text-xs-center showing">
               Showing 1-12 of 20 item(s)
@@ -265,10 +273,11 @@
           </div>
         </div>
         <div id="" class="hidden-sm-down"></div>
-        <div id="">
+        <div id="product">
           <div id="js-product-list" class="row">
             <div class="products product-thumbs">
               <?php foreach ($select_product as  $value) {?>
+    
               <article class="product-miniature js-product-miniature product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12" data-id-product="1" data-id-product-attribute="0" itemscope="" itemtype="http://schema.org/Product">
                 <div class="thumbnail-container">
                   <div class="ttproduct-image">
@@ -276,62 +285,114 @@
                     <a href="<?php echo base_url('detail/'.$value->p_id);?>" class="thumbnail product-thumbnail">
                       <img class="ttproduct-img1" src="<?php echo base_url('assets/uploads/'.$value->file_name);?>" alt="" data-full-size-image-url="<?php echo base_url('assets/uploads/'.$value->file_name);?>">
 
-                      <img class="second_image img-responsive" src="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/302-home_default/faded-short-sleeves-tshirt.jpg" data-full-size-image-url="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/302-large_default/faded-short-sleeves-tshirt.jpg" alt="">
+                      
                     </a>
                     <ul class="product-flags"></ul>
                   </div>
                   <div class="ttproduct-desc">
                     <div class="product-description">
-                     
-                    
-                       <a href="#"><?php echo $value->p_name?></a>
 
-                      
-                        <span itemprop="price" class="price" style="float: right; color: red;"><?php echo "$".$value->price?></span>
-                  
-                      <div class="highlighted-informations no-variants hidden-sm-down">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <?php }?>
-            </div>
-            <div class="container">
-              <nav class="pagination">
-                <div class="col-md-4 pagination-left">
-                  Showing 1-12 of 20 item(s)
-                </div>
-                <div class="col-md-6 pagination-right">
-                  <ul class="page-list clearfix text-xs-center">
-                    <li>
-                      <a rel="prev" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=1" class="previous disabled js-search-link">
-                        <i class="material-icons"></i>Previous
-                      </a>
-                    </li>
-                    <li class="current">
-                      <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=1" class="disabled js-search-link">
-                        1
-                      </a>
-                    </li>
-                    <li>
-                      <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=2" class="js-search-link">
-                        2
-                      </a>
-                    </li>
-                    <li>
-                      <a rel="next" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=2" class="next js-search-link">
-                        <i class="material-icons"></i>Next
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
+
+                     <a href="#"><?php echo $value->p_name?></a>
+
+
+                     <span itemprop="price" class="price" style="float: right; color: red;"><?php echo "$".$value->price?></span>
+
+                     <div class="highlighted-informations no-variants hidden-sm-down">
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </article>
+             <?php }?>
+            
+             <div class="loding"></div>
+           </div>
+          <!--  <div class="container">
+            <nav class="pagination">
+              <div class="col-md-4 pagination-left">
+                Showing 1-12 of 20 item(s)
+              </div>
+              <div class="col-md-6 pagination-right">
+                <ul class="page-list clearfix text-xs-center">
+                  <li>
+                    <a rel="prev" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=1" class="previous disabled js-search-link">
+                      <i class="material-icons"></i>Previous
+                    </a>
+                  </li>
+                  <li class="current">
+                    <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=1" class="disabled js-search-link">
+                      1
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="nofollow" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=2" class="js-search-link">
+                      2
+                    </a>
+                  </li>
+                  <li>
+                    <a rel="next" href="http://demo.templatetrip.com/Prestashop/PRS003/PRS01/en/3-women?page=2" class="next js-search-link">
+                      <i class="material-icons"></i>Next
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div> -->
         </div>
-      </section>
+      </div>
     </section>
-  </div>
+  </section>
+</div>
 </div>
 </section>
+<script>
+    $(document).ready(function(){  
+      $('#btn_asc').click(function(){
+       alert("Hello1");
+      });
+
+       $('#btn_desc').click(function()
+       {
+       alert("Hello2");
+      });
+  });
+
+// function searchFilter() 
+// {
+  // var xhttp = new XMLHttpRequest();
+  // xhttp.onreadystatechange = function() {
+  //   if (this.readyState == 4 && this.status == 200) {
+  //     document.getElementById("searchFilter").innerHTML = this.responseText;
+  //   }
+  // alart("hello ...");
+  // };
+  // alart("Hello");
+  // xhttp.open("GET", "demo_get.asp", true);
+  // xhttp.send();
+// }
+
+  // function searchFilter(page_num)
+  // {
+  //     page_num = page_num?page_num:0;
+  //   var sortBy = $('#sortBy').val();
+  //   $.ajax({
+
+  //     type: 'POST',
+  //     url: '<?php echo base_url();?>products/'+page_num,
+  //     data: 'page='+page_num+'&sortBy='+sortBy,
+
+  //     beforeSend: function()
+  //     {
+  //       $('.loding').show();
+        
+  //     },
+  //     success: function()
+  //     {
+  //       $('#product').html(html);
+  //       $('.loding').fadeOut("slow");
+  //     }
+  //   }); 
+
+  // }
+</script>

@@ -9,21 +9,20 @@
 				<meta itemprop="position" content="1">
 			</li>
 			<li itemprop="itemListElement">
-				<a itemprop="item" href="#">
-					<span itemprop="name">dfdsfsdf</span>
+				<a itemprop="item" href="<?php echo base_url('products/'.$detail->parent_id);?>">
+					<span itemprop="name"><?php echo $detail->parent_id?></span>
 				</a>
 				<meta itemprop="position" content="2">
 			</li>
 			<li itemprop="itemListElement">
-				<a itemprop="item" href="#">
-					<span itemprop="name">Dresses</span>
+				<a itemprop="item" href="<?php echo base_url('product/'.$detail->cat_id);?>">
+					<span itemprop="name"><?php echo $detail->cat_name?></span>
 				</a>
 				<meta itemprop="position" content="3">
 			</li>
 			<li itemprop="itemListElement">
-				<a itemprop="item" href="#">
-					<span itemprop="name"><?php echo $detail->p_name?></span>
-				</a>
+				<span itemprop="name"><?php echo $detail->p_name?></span>
+				
 				<meta itemprop="position" content="5">
 			</li>
 		</ol>
@@ -88,7 +87,7 @@
 					</div>
 					<div class="product-information">
 						<div id="product-description-short-19" itemprop="description">
-							<p>molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p></div>
+							<p><?php echo $detail->p_desc?></p></div>
 							<div class="product-actions">
 								<form action="" method="post" id="add-to-cart-or-refresh">
 									<input type="hidden" name="token" value="7a1f0e363068fa56cb89440744056fe2">

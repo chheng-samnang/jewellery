@@ -14,6 +14,8 @@ class Index extends CI_Controller
 	}
 	function index()
 	{		
+
+		$data['get_all_cat']= $this->im->get_all_category();
 		$data['category']=$this->im->get_category();
 		$data['sub_category']=$this->im->get_sub_category();
 		$data['sub_cat1']=$this->im->lavel_category1();
@@ -29,7 +31,8 @@ class Index extends CI_Controller
 	}
 
 	function detail($id)
-	{
+	{	$data['product']=$this->im->get_product();
+		$data['get_all_cat']= $this->im->get_all_category();
 		$data['category']=$this->im->get_category();
 		$data['sub_category']=$this->im->get_sub_category();
 		$data['sub_cat1']=$this->im->lavel_category1();
@@ -48,6 +51,8 @@ class Index extends CI_Controller
 
 	function products($id="")
 	{
+		$data['product']=$this->pm->product($id);
+		$data['get_all_cat']= $this->im->get_all_category();
 		$data['main_category']=$this->im->get_main_category($id);
 		$data['category']=$this->im->get_category();
 		$data['sub_category']=$this->im->get_sub_category();
@@ -56,6 +61,7 @@ class Index extends CI_Controller
 		$data['sub_image']=$this->im->sub_image($id);
 		$data['sub_cat']=$this->im->sub_category($id);
 		$data['lavel_cat']=$this->im->lavel_category($id);
+		
 		$data['select_product']=$this->im->select_product($id);
 		
 		$this->load->view('template_frontend/header');
@@ -68,7 +74,7 @@ class Index extends CI_Controller
 	function product($id)
 	{
 
-		//$data['main_category']=$this->im->get_main_category($id);
+		$data['get_all_cat']= $this->im->get_all_category();
 		$data['category']=$this->im->get_category(); // for nav
 		$data['sub_category']=$this->im->get_sub_category(); // for nav
 		$data['sub_cat1']=$this->im->lavel_category1(); // for nav

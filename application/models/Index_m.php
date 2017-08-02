@@ -12,7 +12,11 @@ class Index_m extends CI_Model
 	{
 
 	}
-
+	public function get_all_category()
+	{
+		$query = $this->db->query("SELECT cat_name ,parent_id, cat_id FROM tbl_category");
+		return $query->result();
+	}
 	public function get_main_category($id)
 	{
 		$query = $this->db->query("SELECT cat_name ,parent_id, cat_icon, cat_desc, cat_id FROM tbl_category WHERE parent_id=0  AND cat_id=$id");
@@ -57,18 +61,18 @@ class Index_m extends CI_Model
 
 	public function product_detail($id="")
 	{
-		$query = $this->db->query("SELECT * FROM `tbl_product` AS p INNER JOIN `tbl_media` AS m ON P.`p_id`=m.`p_id` WHERE p.p_id='$id' AND media_type='image'");
+		$query = $this->db->query("SELECT * FROM `tbl_product` AS p INNER JOIN tbl_category AS c ON p.cat_id=c.cat_id INNER JOIN `tbl_media` AS m ON P.`p_id`=m.`p_id` WHERE p.p_id='$id' AND media_type='image'");
 		return $query->row();
 	}
 
 	public function select_product($id)
 	{
-		$query = $this->db->query("SELECT * FROM tbl_product AS p INNER JOIN tbl_category AS c ON c.cat_id=p.cat_id LEFT JOIN `tbl_media` AS m ON p.`p_id`=m.`p_id` WHERE c.parent_id='$id' GROUP BY m.p_id ");
+		$query = $this->db->query("SELECT * FROM tbl_product AS p INNER JOIN tbl_category AS c ON c.cat_id=p.cat_id LEFT JOIN `tbl_media` AS m ON p.`p_id`=m.`p_id` WHERE c.parent_id='$id' AND m.media_type='image' GROUP BY m.p_id ORDER BY m.p_id DESC ");
 		return $query->result();
 	}
 	public function get_product1($id)
 	{
-		$query = $this->db->query("SELECT * FROM tbl_product AS p INNER JOIN tbl_category AS c ON c.cat_id=p.cat_id LEFT JOIN `tbl_media` AS m ON p.`p_id`=m.`p_id` WHERE c.cat_id='$id' GROUP BY m.p_id");
+		$query = $this->db->query("SELECT * FROM tbl_product AS p INNER JOIN tbl_category AS c ON c.cat_id=p.cat_id LEFT JOIN `tbl_media` AS m ON p.`p_id`=m.`p_id` WHERE m.media_type='image' AND c.cat_id='$id' GROUP BY m.p_id");
 		return $query->result();
 	}
 
